@@ -66,7 +66,7 @@ if (check)
         if (height > 0)
         {
             //bmi berechnen
-            bmi = weight / Math.Pow(height, 2);
+            bmi = Math.Round(weight / Math.Pow(height, 2),2);
 
             //Zuweisung Kategorie
             if (bmi < 18.5)
