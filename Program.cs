@@ -30,6 +30,8 @@
 using System;
 using System.Diagnostics.Metrics;
 
+
+//Variablen
 string name;
 double height=0;
 double weight=0;
@@ -38,29 +40,34 @@ string input;
 double bmi = 0;
 string categorie = "";
 
-
+//Programmstart String
 Console.WriteLine("╔══════════════════════════════════╗");
 Console.WriteLine("║        BMI - Rechner v1.0        ║");
 Console.WriteLine("╚══════════════════════════════════╝");
+//Eingabe Name
 Console.WriteLine("BITTE NAMEN EINGEBEN!");
 name = Console.ReadLine();
+//Eingabe Gewicht
 Console.WriteLine("BITTE GEWICHT IN KG EINGEBEN!");
 input = Console.ReadLine(); 
-
+//Test Gewicht
 check = double.TryParse(input, out weight);
-
+//Test bestanden
 if (check)
-{
+{   // Eingabe Größe
     Console.WriteLine("BITTE GRÖSSE IN METER EINGEBEN!");
     input = Console.ReadLine();
-    
-    check = double.TryParse(input, out height);
+    //Test Größe 1
+    check = double.TryParse(input, out height);  
     if(check)
-    {
+    //Test Größe 2
+    {   
         if (height > 0)
         {
+            //bmi berechnen
             bmi = weight / Math.Pow(height,2);
 
+            //Zuweisung Kategorie
             if (bmi < 18.5)
                 categorie = "\"UNTERGEWICHT\"";
             else if (bmi < 25)
@@ -71,7 +78,7 @@ if (check)
                 categorie="\"STARKES ÜBERGEWICHT\"";
 
 
-
+            //Endausgabe
 
             Console.WriteLine("──────────────────────────────────");
             Console.WriteLine($"📊 Ergebnis für {name}");
@@ -87,6 +94,7 @@ if (check)
 
         }
         else
+            //Fehlermeldung Größe
             Console.WriteLine("GRÖSSE MUSS > 0 SEIN.");
     }
 }
