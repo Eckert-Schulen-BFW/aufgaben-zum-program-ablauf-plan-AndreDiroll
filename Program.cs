@@ -28,6 +28,7 @@
 //       Jeder Schritt im PAP sollte einer Zeile / einem Block in deinem Code entsprechen.
 
 using System;
+using System.ComponentModel.Design;
 using System.Diagnostics.Metrics;
 
 
@@ -58,14 +59,14 @@ if (check)
     Console.WriteLine("BITTE GRÖSSE IN METER EINGEBEN!");
     input = Console.ReadLine();
     //Test Größe 1
-    check = double.TryParse(input, out height);  
-    if(check)
+    check = double.TryParse(input, out height);
+    if (check)
     //Test Größe 2
-    {   
+    {
         if (height > 0)
         {
             //bmi berechnen
-            bmi = weight / Math.Pow(height,2);
+            bmi = weight / Math.Pow(height, 2);
 
             //Zuweisung Kategorie
             if (bmi < 18.5)
@@ -75,7 +76,7 @@ if (check)
             else if (bmi < 30)
                 categorie = "\"ÜBERGEWICHT\"";
             else
-                categorie="\"STARKES ÜBERGEWICHT\"";
+                categorie = "\"STARKES ÜBERGEWICHT\"";
 
 
             //Endausgabe
@@ -97,9 +98,15 @@ if (check)
             //Fehlermeldung Größe
             Console.WriteLine("GRÖSSE MUSS > 0 SEIN.");
     }
+    else
+        Console.WriteLine("KEINE ZAHL EINGEGEBEN");
+
+
+
 }
 
-
+else
+    Console.WriteLine("KEINE ZAHL EINGEGEBEN");
 
 
 
