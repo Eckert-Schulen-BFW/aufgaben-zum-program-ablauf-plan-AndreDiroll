@@ -27,6 +27,9 @@
 //       Orientiere dich dabei am PAP in der README.md.
 //       Jeder Schritt im PAP sollte einer Zeile / einem Block in deinem Code entsprechen.
 
+using System;
+using System.Diagnostics.Metrics;
+
 string name;
 double height=0;
 double weight=0;
@@ -35,10 +38,15 @@ string input;
 double bmi = 0;
 string categorie = "";
 
+
+Console.WriteLine("╔══════════════════════════════════╗");
+Console.WriteLine("║        BMI - Rechner v1.0        ║");
+Console.WriteLine("╚══════════════════════════════════╝");
 Console.WriteLine("BITTE NAMEN EINGEBEN!");
 name = Console.ReadLine();
 Console.WriteLine("BITTE GEWICHT IN KG EINGEBEN!");
 input = Console.ReadLine(); 
+
 check = double.TryParse(input, out weight);
 
 if (check)
@@ -63,19 +71,24 @@ if (check)
                 categorie="\"STARKES ÜBERGEWICHT\"";
 
 
-            Console.WriteLine($"{name}; {bmi}; {categorie}");
+
+
+            Console.WriteLine("──────────────────────────────────");
+            Console.WriteLine($"📊 Ergebnis für {name}");
+            Console.WriteLine("──────────────────────────────────");
+            Console.WriteLine($"BMI: {bmi}");
+            Console.WriteLine($"Kategorie: {categorie}");
+            Console.WriteLine("──────────────────────────────────");
+
+
+
+
 
 
         }
         else
             Console.WriteLine("GRÖSSE MUSS > 0 SEIN.");
-
-
     }
-
-
-
-
 }
 
 
