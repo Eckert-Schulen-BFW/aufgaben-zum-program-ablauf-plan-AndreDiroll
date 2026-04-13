@@ -17,8 +17,8 @@ Führe alle Testfälle aus und notiere die tatsächliche Ausgabe deines Programm
 | **Eingabe Gewicht** | 70 |
 | **Eingabe Größe** | 1.75 |
 | **Erwartete Kategorie** | Normalgewicht |
-| **Tatsächliche Ausgabe** | *(hier einfügen)* |
-| **✅ Bestanden?** | Ja / Nein |
+| **Tatsächliche Ausgabe** | Normalgewicht |
+| **✅ Bestanden?** | Ja  |
 
 ---
 
@@ -30,8 +30,8 @@ Führe alle Testfälle aus und notiere die tatsächliche Ausgabe deines Programm
 | **Eingabe Gewicht** | 50 |
 | **Eingabe Größe** | 1.70 |
 | **Erwartete Kategorie** | Untergewicht |
-| **Tatsächliche Ausgabe** | *(hier einfügen)* |
-| **✅ Bestanden?** | Ja / Nein |
+| **Tatsächliche Ausgabe** | Untergewicht |
+| **✅ Bestanden?** | Ja  |
 
 ---
 
@@ -43,8 +43,8 @@ Führe alle Testfälle aus und notiere die tatsächliche Ausgabe deines Programm
 | **Eingabe Gewicht** | 95 |
 | **Eingabe Größe** | 1.75 |
 | **Erwartete Kategorie** | Übergewicht |
-| **Tatsächliche Ausgabe** | *(hier einfügen)* |
-| **✅ Bestanden?** | Ja / Nein |
+| **Tatsächliche Ausgabe** | Übergewicht |
+| **✅ Bestanden?** | Ja |
 
 ---
 
@@ -56,8 +56,8 @@ Führe alle Testfälle aus und notiere die tatsächliche Ausgabe deines Programm
 | **Eingabe Gewicht** | 120 |
 | **Eingabe Größe** | 1.75 |
 | **Erwartete Kategorie** | Starkes Übergewicht |
-| **Tatsächliche Ausgabe** | *(hier einfügen)* |
-| **✅ Bestanden?** | Ja / Nein |
+| **Tatsächliche Ausgabe** | Starkes Übergewicht |
+| **✅ Bestanden?** | Ja |
 
 ---
 
@@ -69,8 +69,8 @@ Führe alle Testfälle aus und notiere die tatsächliche Ausgabe deines Programm
 | **Eingabe Gewicht** | `abc` |
 | **Eingabe Größe** | (entfällt) |
 | **Erwartet** | Fehlermeldung, Programm endet |
-| **Tatsächliche Ausgabe** | *(hier einfügen)* |
-| **✅ Bestanden?** | Ja / Nein |
+| **Tatsächliche Ausgabe** | Fehlermeldung, Programm endet|
+| **✅ Bestanden?** | Ja  |
 
 ---
 
@@ -82,8 +82,8 @@ Führe alle Testfälle aus und notiere die tatsächliche Ausgabe deines Programm
 | **Eingabe Gewicht** | 70 |
 | **Eingabe Größe** | -1 |
 | **Erwartet** | Fehlermeldung (Größe ungültig), Programm endet |
-| **Tatsächliche Ausgabe** | *(hier einfügen)* |
-| **✅ Bestanden?** | Ja / Nein |
+| **Tatsächliche Ausgabe** | Fehlermeldung (Größe ungültig), Programm endet |
+| **✅ Bestanden?** | Ja  |
 
 ---
 
@@ -93,10 +93,10 @@ Führe alle Testfälle aus und notiere die tatsächliche Ausgabe deines Programm
 > Was passiert, wenn jemand `1,75` statt `1.75` als Größe eingibt? Teste es! Wie könnte man das Problem lösen?
 
 **Beobachtung beim Test:**  
-*(hier einfügen)*
+*Bei mit passiert genau das umgedrehte
 
 **Mögliche Lösung:**  
-*(hier einfügen)*
+string.Replace('.',',')
 
 ---
 
@@ -104,7 +104,7 @@ Führe alle Testfälle aus und notiere die tatsächliche Ausgabe deines Programm
 > Warum ist die Reihenfolge der `if-else-if`-Bedingungen wichtig? Was würde passieren, wenn du mit `BMI < 30` anfängst?
 
 **Antwort:**  
-*(hier einfügen)*
+Dann würden alle kleineren Einteilungen wegfallen
 
 ---
 
@@ -112,7 +112,7 @@ Führe alle Testfälle aus und notiere die tatsächliche Ausgabe deines Programm
 > Der PAP zeigt, dass `groesse > 0` **nach** TryParse geprüft wird. Warum macht diese Reihenfolge Sinn?
 
 **Antwort:**  
-*(hier einfügen)*
+Weil der String selbst nicht geprüft werden kann.
 
 ---
 
@@ -120,11 +120,11 @@ Führe alle Testfälle aus und notiere die tatsächliche Ausgabe deines Programm
 
 | Testfall | Bestanden? |
 |----------|-----------|
-| TC-01 | ⬜ |
-| TC-02 | ⬜ |
-| TC-03 | ⬜ |
-| TC-04 | ⬜ |
-| TC-05 | ⬜ |
-| TC-06 | ⬜ |
+| TC-01 | ⬜ |x
+| TC-02 | ⬜ |x
+| TC-03 | ⬜ |x
+| TC-04 | ⬜ |x
+| TC-05 | ⬜ |x
+| TC-06 | ⬜ |x
 
-**Bestandene Tests:** ___ / 6
+**Bestandene Tests:** 6 / 6
